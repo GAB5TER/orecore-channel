@@ -1,4 +1,4 @@
-var bitcore = require('bitcore-lib');
+var bitcore = require('bitcore-lib-dash');
 var fs = require('fs');
 var PrivateKey = bitcore.PrivateKey;
 var Provider = require('../lib/Provider');

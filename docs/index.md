@@ -37,10 +37,10 @@ var consumer = new Consumer({
 });
 ```
 
-Now that we have instantiated our object, we have two ways of funding the channel. The basic one is to send bitcoins to an address that is provided by the Consumer instance (a private key is created for this purpose).
+Now that we have instantiated our object, we have two ways of funding the channel. The basic one is to send dash to an address that is provided by the Consumer instance (a private key is created for this purpose).
 
 ```javascript
-console.info('Send bitcoins to ' + consumer.fundingAddress.toString() ' to fund the channel');
+console.info('Send dash to ' + consumer.fundingAddress.toString() ' to fund the channel');
 
 consumer.processFunding([{...}, {...}, {...}]);
 ```

@@ -19,7 +19,7 @@
     }
   ],
   "keywords": [
-    "bitcoin",
+    "dash",
     "bitcore",
     "btc",
     "satoshi",
@@ -28,9 +28,9 @@
     "smart contract"
   ],
   "license": "MIT",
-  "repository": "https://github.com/bitpay/bitcore-channel",
+  "repository": "https://github.com/cofresi/bitcore-channel",
   "dependencies": {
-    "bitcore-lib": "^0.13.7",
+    "bitcore-lib-dash": "^0.13.20",
     "inherits": "=2.0.1"
   },
   "devDependencies": {
