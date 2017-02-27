@@ -1,5 +1,5 @@
 {
-  "name": "bitcore-channel",
+  "name": "bitcore-channel-dash",
   "version": "1.0.1",
   "description": "Add payment channels support to bitcore",
   "scripts": {
@@ -28,7 +28,7 @@
     "smart contract"
   ],
   "license": "MIT",
-  "repository": "https://github.com/cofresi/bitcore-channel",
+  "repository": "https://github.com/cofresi/bitcore-channel-dash",
   "dependencies": {
     "bitcore-lib-dash": "^0.13.20",
     "inherits": "=2.0.1"
