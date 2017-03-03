@@ -77,7 +77,7 @@ As a consumer, we'd like to validate that the refund received is valid. If it is
 ```javascript
 assert(consumer.validateRefund(messageFromProvider));
 
-sendToProvider(consumer.incrementPaymentBy(400 * DUFFS));
+sendToProvider(consumer.incrementPaymentBy(400 * SATOSHIS));
 sendToProvider(consumer.incrementPaymentBy(4 * BITS));
 ```
 
