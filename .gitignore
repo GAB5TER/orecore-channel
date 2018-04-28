@@ -39,3 +39,4 @@ node_modules
 bitcore-channel.js
 bitcore-channel.min.js
 tests.js
+.idea
