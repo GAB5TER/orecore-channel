@@ -1,7 +1,7 @@
 {
-  "name": "bitcore-channel-dash",
+  "name": "@dashevo/dashcore-channel",
   "version": "1.0.1",
-  "description": "Add payment channels support to bitcore",
+  "description": "Add payment channels support to bitcore/dashcore",
   "scripts": {
     "lint": "gulp lint",
     "test": "gulp test",
@@ -25,10 +25,12 @@
     "satoshi",
     "payment channels",
     "channel",
-    "smart contract"
+    "smart contract",
+    "dashevo",
+    "dashcore"
   ],
   "license": "MIT",
-  "repository": "https://github.com/cofresi/bitcore-channel-dash",
+  "repository": "https://github.com/dashevo/dashcore-channel",
   "dependencies": {
     "bitcore-lib-dash": "^0.13.20",
     "inherits": "=2.0.1"
