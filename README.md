@@ -1,24 +1,21 @@
-<img src="http://bitcore.io/css/images/module-channel.png" alt="bitcore payment channels" height="35">
-# Payment Channels for Bitcore
+Orecore payment channels
+========================
 
-[![NPM Package](https://img.shields.io/npm/v/bitcore-channel.svg?style=flat-square)](https://www.npmjs.org/package/bitcore-channel)
-[![Build Status](https://img.shields.io/travis/bitpay/bitcore-channel.svg?branch=master&style=flat-square)](https://travis-ci.org/bitpay/bitcore-channel)
-[![Coverage Status](https://img.shields.io/coveralls/bitpay/bitcore-channel.svg?style=flat-square)](https://coveralls.io/r/bitpay/bitcore-channel)
+# Payment Channels for Orecore
 
+A module for [orecore][orecore] that implements [Payment Channels][channel]. Payment channels (sometimes referred as micropayment channels) are a type of smart contracts that allow rapidly adjusting galactrum transactions. This can be used to do trustless simultaneous payments with a service provider without the need of an intermediary, and some other applications.
 
-A module for [bitcore][bitcore] that implements [Payment Channels][channel]. Payment channels (sometimes referred as micropayment channels) are a type of smart contracts that allow rapidly adjusting dash transactions. This can be used to do trustless simultaneous payments with a service provider without the need of an intermediary, and some other applications.
-
-See [the main bitcore repo][bitcore] or the [bitcore guide on Payment Channels](http://bitcore.io/guide/module/channel/index.html) for more information.
+See [the main orecore repo][orecore] or the [orecore guide on Payment Channels](http://bitcore.io/guide/module/channel/index.html) for more information.
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/bitpay/bitcore/blob/master/CONTRIBUTING.md) on the main bitcore repo for information about how to contribute.
+See [CONTRIBUTING.md](https://github.com/GAB5TER/orecore/blob/master/CONTRIBUTING.md) on the main orecore repo for information about how to contribute.
 
 ## License
 
-Code released under [the MIT license](https://github.com/bitpay/bitcore/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/GAB5TER/orecore/blob/master/LICENSE).
 
 Copyright 2013-2015 BitPay, Inc. Bitcore is a trademark maintained by BitPay, Inc.
 
-[bitcore]: https://github.com/bitpay/bitcore
+[orecore]: https://github.com/GAB5TER/orecore
 [channel]: https://bitcoin.org/en/developer-guide#micropayment-channel
