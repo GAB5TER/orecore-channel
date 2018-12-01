@@ -1,8 +1,8 @@
 'use strict';
 
 var should = require('chai').should();
-var bitcore = require('bitcore-lib-dash');
-var Networks = bitcore.Networks;
+var orecore = require('orecore-lib');
+var Networks = orecore.Networks;
 
 describe('Simple Payment Channel usage', function() {
 
@@ -19,14 +19,14 @@ describe('Simple Payment Channel usage', function() {
       var obj = consumer.commitmentTx.toObject();
       var expected = {
         'transaction': {
-          'hash': '591ad922bfab0d8d4bd359dbfb6d8006efd1082029af1d3d8bdc690f1908fb37',
+          'hash': 'ddc1df4c0bd602267f65fc371548a883c97adbe6b1257a65d76acab8c77461b0',
           'version': 1,
           'inputs': [{
             'prevTxId': '787ef38932601aa6d22b844770121f713b0afb6c13fdd52e512c6165508f47cd',
             'outputIndex': 1,
             'sequenceNumber': 4294967295,
-            'script': '483045022100e5e9a5660ed650b377d1063c57ba210d2f8e36f350489a5b0ca9b46eb8fb659a02205a6d336c2252b39fcb7534fdfc3a593a87b5c34c0d3ad27e25bd5edea027308a012103bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
-            'scriptString': '72 0x3045022100e5e9a5660ed650b377d1063c57ba210d2f8e36f350489a5b0ca9b46eb8fb659a02205a6d336c2252b39fcb7534fdfc3a593a87b5c34c0d3ad27e25bd5edea027308a01 33 0x03bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
+            'script': '473044022004f9b2aaba3a866e33ef8676d3c51599198e0c8d88fcb776080bb231fec9db6502207a18ad1969dcd345a20fe20b598d140c7a0cc900ef56d0ebf958fd8925207f63012103bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
+            'scriptString': '71 0x3044022004f9b2aaba3a866e33ef8676d3c51599198e0c8d88fcb776080bb231fec9db6502207a18ad1969dcd345a20fe20b598d140c7a0cc900ef56d0ebf958fd8925207f6301 33 0x03bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
             'output': {
               'satoshis': 50000000,
               'script': '76a91469b678f36c91bf635ff6e9479edd3253a5dfd41a88ac'
@@ -35,8 +35,8 @@ describe('Simple Payment Channel usage', function() {
             'prevTxId': 'c1003b5e2c9f5eca65bde73463035e5dffcfbd3c234e55e069cfeebb513293e4',
             'outputIndex': 0,
             'sequenceNumber': 4294967295,
-            'script': '47304402205d5c5ae33804c2842311bedca88474ee47d49efba2a3aece49e7039551cc98b00220338b5aed644a810b0d92c9717029a1dfe3808f8a5ce74ec4f5cc03c6a7af2148012103bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
-            'scriptString': '71 0x304402205d5c5ae33804c2842311bedca88474ee47d49efba2a3aece49e7039551cc98b00220338b5aed644a810b0d92c9717029a1dfe3808f8a5ce74ec4f5cc03c6a7af214801 33 0x03bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
+            'script': '473044022048726e423d203f87207603eeaf28c8cb560cec1e12c4afe052a8d7135ac101c7022005fde5af8131d04ce5297a6a6b56794316b70c628d0a1599a44454baa66ac20c012103bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
+            'scriptString': '71 0x3044022048726e423d203f87207603eeaf28c8cb560cec1e12c4afe052a8d7135ac101c7022005fde5af8131d04ce5297a6a6b56794316b70c628d0a1599a44454baa66ac20c01 33 0x03bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
             'output': {
               'satoshis': 10000000,
               'script': '76a91469b678f36c91bf635ff6e9479edd3253a5dfd41a88ac'
@@ -130,15 +130,15 @@ describe('Simple Payment Channel usage', function() {
   });
 });
 
-var providerKey = new bitcore.PrivateKey('58e78db594be551a8f4c7070fd8695363992bd1eb37d01cd4a4da608f3dc5c2d', bitcore.Networks.testnet);
-var fundingKey = new bitcore.PrivateKey('79b0630419ad72397d211db4988c98ffcb5955b14f6ec5c5651eec5c98d7e557', bitcore.Networks.testnet);
-var commitmentKey = new bitcore.PrivateKey('17bc93ac93f4a26599d3af49e59206e8276259febba503434eacb871f9bbad75', bitcore.Networks.testnet);
+var providerKey = new orecore.PrivateKey('58e78db594be551a8f4c7070fd8695363992bd1eb37d01cd4a4da608f3dc5c2d', orecore.Networks.testnet);
+var fundingKey = new orecore.PrivateKey('79b0630419ad72397d211db4988c98ffcb5955b14f6ec5c5651eec5c98d7e557', orecore.Networks.testnet);
+var commitmentKey = new orecore.PrivateKey('17bc93ac93f4a26599d3af49e59206e8276259febba503434eacb871f9bbad75', orecore.Networks.testnet);
 var providerAddress = providerKey.toAddress(Networks.testnet);
 
 var getConsumer = function() {
 
   var Consumer = require('../').Consumer;
-  var refundAddress = 'mzCXqcsLBerwyoRZzBFQELHaJ1ZtBSxxe6';
+  var refundAddress = 'yf83ixbQdytYBpFkrCxGCdnUSGzumhyPjS';
 
   var consumer = new Consumer({
     network: 'testnet',
@@ -159,7 +159,7 @@ var getConsumer = function() {
 var getFundedConsumer = function() {
   var result = getConsumer();
   result.consumer.processFunding([{
-    'address': 'mq9uqc4W8phHXRPt3ZWUdRpoZ9rkR67Dw1',
+    'address': 'yfy8RPnjG1xmra6VRBvynfi2WT8RZiHJoj',
     'txid': '787ef38932601aa6d22b844770121f713b0afb6c13fdd52e512c6165508f47cd',
     'vout': 1,
     'ts': 1416205164,
@@ -167,7 +167,7 @@ var getFundedConsumer = function() {
     'amount': 0.5,
     'confirmationsFromCache': false
   }, {
-    'address': 'mq9uqc4W8phHXRPt3ZWUdRpoZ9rkR67Dw1',
+    'address': 'yfy8RPnjG1xmra6VRBvynfi2WT8RZiHJoj',
     'txid': 'c1003b5e2c9f5eca65bde73463035e5dffcfbd3c234e55e069cfeebb513293e4',
     'vout': 0,
     'ts': 1416196853,

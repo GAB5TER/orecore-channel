@@ -1,8 +1,8 @@
 'use strict';
 
 var should = require('chai').should();
-var bitcore = require('bitcore-lib-dash');
-var Networks = bitcore.Networks;
+var orecore = require('orecore-lib');
+var Networks = orecore.Networks;
 
 describe('signature checks', function() {
 
@@ -33,15 +33,15 @@ describe('signature checks', function() {
 
 });
 
-var providerKey = new bitcore.PrivateKey('58e78db594be551a8f4c7070fd8695363992bd1eb37d01cd4a4da608f3dc5c2d', bitcore.Networks.testnet);
-var fundingKey = new bitcore.PrivateKey('79b0630419ad72397d211db4988c98ffcb5955b14f6ec5c5651eec5c98d7e557', bitcore.Networks.testnet);
-var commitmentKey = new bitcore.PrivateKey('17bc93ac93f4a26599d3af49e59206e8276259febba503434eacb871f9bbad75', bitcore.Networks.testnet);
+var providerKey = new orecore.PrivateKey('58e78db594be551a8f4c7070fd8695363992bd1eb37d01cd4a4da608f3dc5c2d', orecore.Networks.testnet);
+var fundingKey = new orecore.PrivateKey('79b0630419ad72397d211db4988c98ffcb5955b14f6ec5c5651eec5c98d7e557', orecore.Networks.testnet);
+var commitmentKey = new orecore.PrivateKey('17bc93ac93f4a26599d3af49e59206e8276259febba503434eacb871f9bbad75', orecore.Networks.testnet);
 var providerAddress = providerKey.toAddress(Networks.testnet);
 
 var getConsumer = function() {
 
   var Consumer = require('../').Consumer;
-  var refundAddress = 'mzCXqcsLBerwyoRZzBFQELHaJ1ZtBSxxe6';
+  var refundAddress = 'yf83ixbQdytYBpFkrCxGCdnUSGzumhyPjS';
 
   var consumer = new Consumer({
     network: 'testnet',
@@ -62,7 +62,7 @@ var getConsumer = function() {
 var getFundedConsumer = function() {
   var result = getConsumer();
   result.consumer.processFunding([{
-    'address': 'mq9uqc4W8phHXRPt3ZWUdRpoZ9rkR67Dw1',
+    'address': 'yfy8RPnjG1xmra6VRBvynfi2WT8RZiHJoj',
     'txid': '787ef38932601aa6d22b844770121f713b0afb6c13fdd52e512c6165508f47cd',
     'vout': 1,
     'ts': 1416205164,
@@ -70,7 +70,7 @@ var getFundedConsumer = function() {
     'amount': 0.5,
     'confirmationsFromCache': false
   }, {
-    'address': 'mq9uqc4W8phHXRPt3ZWUdRpoZ9rkR67Dw1',
+    'address': 'yfy8RPnjG1xmra6VRBvynfi2WT8RZiHJoj',
     'txid': 'c1003b5e2c9f5eca65bde73463035e5dffcfbd3c234e55e069cfeebb513293e4',
     'vout': 0,
     'ts': 1416196853,
