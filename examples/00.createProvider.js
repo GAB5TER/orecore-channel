@@ -1,7 +1,7 @@
 var channel = require('../');
-var bitcore = require('bitcore-lib-dash');
+var orecore = require('orecore-lib');
 
 
-var providerKey = new bitcore.PrivateKey(bitcore.Networks.testnet);
+var providerKey = new orecore.PrivateKey(orecore.Networks.testnet);
 
 console.log('provider key: ' + providerKey.toString());

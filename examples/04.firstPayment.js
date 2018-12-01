@@ -2,8 +2,8 @@
 
 var assert = require('assert');
 var fs = require('fs');
-var bitcore = require('bitcore-lib-dash');
-var PrivateKey = bitcore.PrivateKey;
+var orecore = require('orecore-lib');
+var PrivateKey = orecore.PrivateKey;
 var Consumer = require('../lib/Consumer');
 var Commitment = require('../lib/transactions/Commitment');
 

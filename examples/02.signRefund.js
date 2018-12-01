@@ -1,6 +1,6 @@
-var bitcore = require('bitcore-lib-dash');
+var orecore = require('orecore-lib');
 var fs = require('fs');
-var PrivateKey = bitcore.PrivateKey;
+var PrivateKey = orecore.PrivateKey;
 var Provider = require('../lib/Provider');
 
 var providerKey = new PrivateKey('75d79298ce12ea86863794f0080a14b424d9169f7e325fad52f60753eb072afc');

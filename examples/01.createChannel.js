@@ -1,7 +1,7 @@
 'use strict';
-var bitcore = require('bitcore-lib-dash');
+var orecore = require('orecore-lib');
 var fs = require('fs');
-var PrivateKey = bitcore.PrivateKey;
+var PrivateKey = orecore.PrivateKey;
 var Consumer = require('../lib/Consumer');
 
 var fundingKey = new PrivateKey('cb5dc68fbcaf37f29139b50fa4664b395c03e49deb966e5d49a629af005d0654');
@@ -19,7 +19,7 @@ var consumer = new Consumer({
   providerAddress: providerKey.toAddress()
 });
 
-var insight = new bitcore.transport.explorers.Insight();
+var insight = new orecore.transport.explorers.Insight();
 
 insight.getUnspentUtxos(consumer.fundingAddress, function(err, utxos) {
   consumer.processFunding(utxos);

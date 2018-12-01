@@ -2,8 +2,8 @@
 
 var assert = require('assert');
 var fs = require('fs');
-var bitcore = require('bitcore-lib-dash');
-var PrivateKey = bitcore.PrivateKey;
+var orecore = require('orecore-lib');
+var PrivateKey = orecore.PrivateKey;
 var Consumer = require('../lib/Consumer');
 var Commitment = require('../lib/transactions/Commitment');
 
@@ -30,7 +30,7 @@ var refund = JSON.parse(fs.readFileSync('signed.refund.log'));
 
 if (consumer.validateRefund(refund)) {
   console.log('validated');
-  var insight = new bitcore.transport.explorers.Insight();
+  var insight = new orecore.transport.explorers.Insight();
 
   insight.broadcast(consumer.commitmentTx, function(err, txid) {
     if (err) {
