@@ -1,19 +1,19 @@
 {
-  "name": "bitcore-channel",
-  "main": "./bitcore-channel.min.js",
+  "name": "orecore-channel",
+  "main": "./orecore-channel.min.js",
   "version": "1.0.1",
-  "homepage": "https://github.com/cofresi/bitcore-channel",
+  "homepage": "https://github.com/GAB5TER/orecore-channel",
   "authors": [
     "BitPay"
   ],
-  "description": "Payment Channels implemented for Bitcore.",
+  "description": "Payment Channels implemented for Orecore.",
   "moduleType": [
     "globals"
   ],
   "keywords": [
-    "dash",
-    "bitcore",
-    "btc",
+    "galactrum",
+    "orecore",
+    "ore",
     "satoshi",
     "payment channels",
     "channel",

@@ -1,5 +1,5 @@
 'use strict';
 
-var gulp_bitcore = require('bitcore-build');
+var gulp_orecore = require('orecore-build');
 
-gulp_bitcore('channel');
+gulp_orecore('channel');

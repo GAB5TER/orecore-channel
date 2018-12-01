@@ -36,7 +36,7 @@ node_modules
 *.sw[a-z]
 
 # browser bundles
-bitcore-channel.js
-bitcore-channel.min.js
+orecore-channel.js
+orecore-channel.min.js
 tests.js
 .idea

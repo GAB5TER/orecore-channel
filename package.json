@@ -1,7 +1,7 @@
 {
-  "name": "@dashevo/dashcore-channel",
+  "name": "orecore-channel",
   "version": "1.0.1",
-  "description": "Add payment channels support to bitcore/dashcore",
+  "description": "Add payment channels support to Orecore",
   "scripts": {
     "lint": "gulp lint",
     "test": "gulp test",
@@ -19,24 +19,22 @@
     }
   ],
   "keywords": [
-    "dash",
-    "bitcore",
-    "btc",
+    "galactrum",
+    "orecore",
+    "ore",
     "satoshi",
     "payment channels",
     "channel",
-    "smart contract",
-    "dashevo",
-    "dashcore"
+    "smart contract"
   ],
   "license": "MIT",
-  "repository": "https://github.com/dashevo/dashcore-channel",
+  "repository": "https://github.com/GAB5TER/orecore-channel",
   "dependencies": {
-    "bitcore-lib-dash": "^0.13.20",
+    "orecore-lib": "GAB5TER/orecore-lib",
     "inherits": "=2.0.1"
   },
   "devDependencies": {
-    "bitcore-build": "git://github.com/bitpay/bitcore-build.git",
+    "orecore-build": "GAB5TER/orecore-build",
     "brfs": "^1.2.0",
     "chai": "^2.3.0",
     "gulp": "^3.8.10",
