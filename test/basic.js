@@ -19,14 +19,14 @@ describe('Simple Payment Channel usage', function() {
       var obj = consumer.commitmentTx.toObject();
       var expected = {
         'transaction': {
-          'hash': 'ddc1df4c0bd602267f65fc371548a883c97adbe6b1257a65d76acab8c77461b0',
-          'version': 1,
+          'hash': '7ddd2831d715d552f5136b2dd7d1f821d61f4bad47ff7279e855dc81a439a8ca',
+          'version': 3,
           'inputs': [{
             'prevTxId': '787ef38932601aa6d22b844770121f713b0afb6c13fdd52e512c6165508f47cd',
             'outputIndex': 1,
             'sequenceNumber': 4294967295,
-            'script': '473044022004f9b2aaba3a866e33ef8676d3c51599198e0c8d88fcb776080bb231fec9db6502207a18ad1969dcd345a20fe20b598d140c7a0cc900ef56d0ebf958fd8925207f63012103bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
-            'scriptString': '71 0x3044022004f9b2aaba3a866e33ef8676d3c51599198e0c8d88fcb776080bb231fec9db6502207a18ad1969dcd345a20fe20b598d140c7a0cc900ef56d0ebf958fd8925207f6301 33 0x03bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
+            'script': '47304402203b2015e075c00ae61f1b4c6189f177eb4333e1ffe4315fea6e4cf0addd7bd18e02203a1c18b1aee561481153def9084ea3c765f639256cb15ce13c277ccc87976383012103bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
+            'scriptString': '71 0x304402203b2015e075c00ae61f1b4c6189f177eb4333e1ffe4315fea6e4cf0addd7bd18e02203a1c18b1aee561481153def9084ea3c765f639256cb15ce13c277ccc8797638301 33 0x03bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
             'output': {
               'satoshis': 50000000,
               'script': '76a91469b678f36c91bf635ff6e9479edd3253a5dfd41a88ac'
@@ -35,15 +35,15 @@ describe('Simple Payment Channel usage', function() {
             'prevTxId': 'c1003b5e2c9f5eca65bde73463035e5dffcfbd3c234e55e069cfeebb513293e4',
             'outputIndex': 0,
             'sequenceNumber': 4294967295,
-            'script': '473044022048726e423d203f87207603eeaf28c8cb560cec1e12c4afe052a8d7135ac101c7022005fde5af8131d04ce5297a6a6b56794316b70c628d0a1599a44454baa66ac20c012103bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
-            'scriptString': '71 0x3044022048726e423d203f87207603eeaf28c8cb560cec1e12c4afe052a8d7135ac101c7022005fde5af8131d04ce5297a6a6b56794316b70c628d0a1599a44454baa66ac20c01 33 0x03bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
+            'script': '483045022100f7ee40397ba473d18498b47d3cf350a34fb0f82de424193aeb53ea4f57bfa48c022030c3fd6f4e6195de9ac081d9231e2780942484addea97e849aee0c8ad6c433f1012103bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
+            'scriptString': '72 0x3045022100f7ee40397ba473d18498b47d3cf350a34fb0f82de424193aeb53ea4f57bfa48c022030c3fd6f4e6195de9ac081d9231e2780942484addea97e849aee0c8ad6c433f101 33 0x03bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
             'output': {
               'satoshis': 10000000,
               'script': '76a91469b678f36c91bf635ff6e9479edd3253a5dfd41a88ac'
             }
           }],
           'outputs': [{
-            'satoshis': 59990000,
+            'satoshis': 59999000,
             'script': 'a914fdeaa734587dfed0090c98fbf1bf8730009ddda887'
           }],
           'nLockTime': 0,
@@ -120,12 +120,12 @@ describe('Simple Payment Channel usage', function() {
       var consumer = getValidatedConsumer().consumer;
       provider.validPayment(consumer.incrementPaymentBy(1000));
       provider.currentAmount.should.equal(1000);
-      provider.paymentTx.getFee().should.equal(10000);
+      provider.paymentTx.getFee().should.equal(1000);
       provider.validPayment(consumer.incrementPaymentBy(1000));
       provider.validPayment(consumer.incrementPaymentBy(1000));
       provider.validPayment(consumer.incrementPaymentBy(1000));
       provider.currentAmount.should.equal(4000);
-      provider.paymentTx.getFee().should.equal(10000);
+      provider.paymentTx.getFee().should.equal(1000);
     });
   });
 });
